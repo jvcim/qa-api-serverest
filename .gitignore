@@ -1,0 +1,14 @@
+# Segredos e configurações locais
+.env
+.env.*
+!.env.example
+
+# Dependências e artefatos futuros de execução
+node_modules/
+test-results/
+playwright-report/
+
+# Sistema operacional e editor
+.DS_Store
+Thumbs.db
+.vscode/
