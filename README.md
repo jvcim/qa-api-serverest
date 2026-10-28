@@ -12,6 +12,12 @@ Demonstrar um ciclo de QA para APIs: Discovery, planejamento, design de testes, 
 
 O contrato OpenAPI 3.0.0 publicado pela ServeRest informa versão `3.2.2`, 9 caminhos, 16 operações, 32 schemas reutilizáveis, 4 request bodies e 4 respostas reutilizáveis. A Discovery, o plano e os riscos permanecem documentais: ainda não há chamadas, testes ou resultados.
 
+## Documentação disponível
+
+- [Análise de requisitos — Etapa 01: Discovery](docs/REQUIREMENTS_ANALYSIS.md)
+- [Plano de testes de API — Etapa 02](docs/TEST_PLAN.md)
+- [Avaliação de riscos de qualidade — Etapa 02](docs/RISK_ASSESSMENT.md)
+
 ## Tecnologias planejadas
 
 - API REST ServeRest e contrato OpenAPI 3.0;
