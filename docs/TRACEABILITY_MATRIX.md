@@ -3,7 +3,7 @@
 | Campo | Valor |
 | --- | --- |
 | Etapa | 03 — Design de Testes |
-| Estado de execução | Todos os casos: `Not Run` |
+| Estado de execução | Parcial; resultados confirmados estão listados abaixo |
 | Escopo | Cobertura planejada; não representa aprovação nem conformidade da API |
 
 ## Requisito → Endpoint → Risco → Casos
@@ -25,6 +25,17 @@
 | `REQ-CART-03`, `D-09` | `API-13`, `API-09` | `RP-01` | TC-CART-008, 012 | Smoke/Exploratório; condicionado | Not Run |
 | `REQ-CART-04` | `API-16` | `RP-01` | TC-CART-009 | Smoke; condicionado | Not Run |
 | `REQ-CART-05`, `D-05` | `API-15` | `RP-08` | TC-CART-010, 011 | Regression/Exploratório; condicionado | Not Run |
+
+## Execução confirmada (09/11/2026)
+
+| Casos | Resultado | Ambiente |
+| --- | --- | --- |
+| TC-AUTH-001, TC-AUTH-005 | Pass | ServeRest 3.2.2 local |
+| TC-USR-001, 002, 005, 006, 008, 009 | Pass | ServeRest 3.2.2 local |
+| TC-PRD-001, 002, 003, 006, 007, 008, 009, 010 | Pass | ServeRest 3.2.2 local |
+| TC-CART-001, 008, 009 | Pass | ServeRest 3.2.2 local |
+
+Todos os demais casos permanecem `Not Run`. As evidências e limitações da execução estão em `EXECUTION_REPORT.md`.
 
 ## Cobertura planejada das operações
 
@@ -60,4 +71,4 @@
 
 ## Resumo
 
-As 16 operações possuem pelo menos um cenário planejado. Das 36 propostas, 20 são candidatas imediatas à automação, 15 são candidatas condicionadas a esclarecimentos contratuais, 1 não deve ser automatizada antes de resolver `D-01` e 7 possuem perfil exploratório. Cobertura planejada não é cobertura executada; o resultado é `Not Run` para todos os casos.
+As 16 operações possuem pelo menos um cenário planejado. Das 36 propostas, 20 são candidatas imediatas à automação, 15 são candidatas condicionadas a esclarecimentos contratuais, 1 não deve ser automatizada antes de resolver `D-01` e 7 possuem perfil exploratório. A execução é parcial; somente os casos listados na seção de execução confirmada possuem resultado registrado.
