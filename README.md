@@ -1,16 +1,16 @@
 # ServeRest — API Quality Engineering
 
-Projeto de portfólio dedicado ao ciclo completo de Quality Assurance para APIs REST: análise de requisitos, planejamento de testes, análise de riscos, futura automação com Postman e integração contínua. A API pública de demonstração avaliada é a [ServeRest](https://serverest.dev/).
+Projeto de portfólio dedicado a Quality Assurance para APIs REST: análise de requisitos, planejamento, execução local com Postman/Newman, evidências e integração contínua. A API avaliada é a [ServeRest](https://serverest.dev/).
 
 ## Objetivo
 
-Demonstrar um ciclo de QA para APIs: Discovery, planejamento, design de testes, automação, integração contínua, evidências e relatório final. O projeto está em desenvolvimento: Discovery e Planejamento foram concluídos documentalmente; ainda não há testes, execução, collections, bugs ou tickets.
+Demonstrar um ciclo de QA para APIs: Discovery, planejamento, design, execução rastreável, automação reexecutável e CI. Os resultados registrados são reais e obtidos em uma instância local isolada.
 
 ## Estágio atual
 
-**Etapa 03 — Design de Testes em desenvolvimento.** Discovery e Planejamento foram concluídos documentalmente; não há execução registrada.
+**Etapa 04 — Execução inicial e automação.** Discovery, planejamento e design foram concluídos; Smoke e regressão negativa já foram executados com Newman.
 
-O contrato OpenAPI 3.0.0 publicado pela ServeRest informa versão `3.2.2`, 9 caminhos, 16 operações, 32 schemas reutilizáveis, 4 request bodies e 4 respostas reutilizáveis. A Discovery, o plano e os riscos permanecem documentais: ainda não há chamadas, testes ou resultados.
+O contrato OpenAPI 3.0.0 informa versão `3.2.2`, 9 caminhos e 16 operações. A execução usa `http://localhost:3000`, dados sintéticos e limpeza automática; casos não executados seguem como `Not Run`.
 
 ## Documentação disponível
 
@@ -20,21 +20,22 @@ O contrato OpenAPI 3.0.0 publicado pela ServeRest informa versão `3.2.2`, 9 cam
 - [Catálogo de casos — Etapa 03](docs/TEST_CATALOG.md)
 - [Matriz de rastreabilidade — Etapa 03](docs/TRACEABILITY_MATRIX.md)
 - [Estratégia de dados de teste — Etapa 03](docs/TEST_DATA_STRATEGY.md)
+- [Relatório de execução](docs/EXECUTION_REPORT.md)
+- [Caso de estudo](docs/PORTFOLIO_CASE_STUDY.md)
+- [Collections Postman](postman/README.md)
 
 ## Próximas etapas planejadas
 
-1. Revisar o design e esclarecer lacunas do contrato em ambiente isolado.
-2. Preparar a futura gestão de trabalho e rastreabilidade no Jira.
-3. Criar collections Postman e automação somente após a definição dos oráculos.
-4. Executar, analisar evidências e integrar a validação contínua quando autorizado.
+1. Ampliar as collections para os casos restantes.
+2. Criar o backlog no projeto Jira pessoal assim que ele existir.
+3. Consolidar relatório e apresentação final.
 
 ## Tecnologias planejadas
 
 - API REST ServeRest e contrato OpenAPI 3.0;
-- Postman e scripts JavaScript para futura exploração e automação, ainda não criados;
-- Postman CLI para futura execução local e em CI, ainda não configurado;
+- Postman collections e Newman;
 - Swagger/OpenAPI para análise e rastreabilidade contratual;
-- GitHub Actions como alternativa de integração contínua futura, ainda não configurada;
+- GitHub Actions para executar as collections em instância local isolada;
 - Jira para futura gestão de trabalho e rastreabilidade, ainda não criado;
 - Git e GitHub para versionamento e futura publicação;
 

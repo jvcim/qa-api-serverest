@@ -27,3 +27,22 @@ O schema OpenAPI ainda descreve `produtos` como objeto, embora o exemplo publica
 | TC-PRD-010 | Exclusão de produto vinculado ao carrinho bloqueada com `400`. |
 
 Cada fluxo usou recursos sintéticos exclusivos e realizou limpeza após a verificação. Não foram executados cenários exploratórios ou casos não listados nesta tabela.
+
+## Rejeições de carrinho
+
+| Casos relacionados | Resultado observado |
+| --- | --- |
+| TC-CART-003 | Produto inexistente recusado com `400`. |
+| TC-CART-004 | Quantidade acima do estoque recusada com `400`. |
+| TC-CART-005 | Produto duplicado no mesmo carrinho recusado com `400`. |
+| TC-CART-006 | Segundo carrinho do mesmo usuário recusado com `400`; primeiro carrinho foi criado com `201` e cancelado na limpeza. |
+
+## Casos adicionais concluídos
+
+| Casos relacionados | Resultado observado |
+| --- | --- |
+| TC-CART-007, TC-CART-010 | Listar/consultar carrinho: `200`; concluir compra: `200`; consulta posterior: `400`. |
+| TC-CART-011 | Um item de preço 10 retornou `quantidadeTotal: 1` e `precoTotal: 10`. |
+| TC-CART-012 | Criação rejeitada por quantidade insuficiente: `400`; estoque permaneceu `2 → 2`. |
+| TC-USR-003, TC-PRD-004, TC-PRD-005 | Campo ausente, enum inválido e valores zero/negativos foram recusados com `400`. |
+| TC-USR-004, TC-USR-007 | Filtro por e-mail: `200` com um registro; PUT com ID inexistente: `201`. |
