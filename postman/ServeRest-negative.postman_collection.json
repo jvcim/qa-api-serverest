@@ -1,0 +1,9 @@
+{
+  "info":{"name":"ServeRest | Regressão negativa local","schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "variable":[{"key":"baseUrl","value":"http://localhost:3000"}],
+  "item":[
+    {"name":"TC-AUTH-002 | Credenciais inválidas","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"email\":\"naoexiste@qa.com.br\",\"password\":\"invalida\"}"},"url":"{{baseUrl}}/login"},"event":[{"listen":"test","script":{"type":"text/javascript","exec":["pm.test('401 - credenciais recusadas', () => pm.response.to.have.status(401));"]}}]},
+    {"name":"TC-AUTH-005 | Produto sem token","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"nome\":\"Sem token\",\"preco\":1,\"descricao\":\"negativo\",\"quantidade\":1}"},"url":"{{baseUrl}}/produtos"},"event":[{"listen":"test","script":{"type":"text/javascript","exec":["pm.test('401 - token ausente', () => pm.response.to.have.status(401));"]}}]},
+    {"name":"TC-AUTH-005 | Produto com token inválido","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"},{"key":"Authorization","value":"Bearer invalido"}],"body":{"mode":"raw","raw":"{\"nome\":\"Token invalido\",\"preco\":1,\"descricao\":\"negativo\",\"quantidade\":1}"},"url":"{{baseUrl}}/produtos"},"event":[{"listen":"test","script":{"type":"text/javascript","exec":["pm.test('401 - token inválido', () => pm.response.to.have.status(401));"]}}]}
+  ]
+}
